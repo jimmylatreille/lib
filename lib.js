@@ -1,14 +1,13 @@
-/*LIB version 0.1
-*	 @author Jimmy Latreille
-*	 @date 19 janvier 2014 23pm
-*	 @email jimmylatreille@gmail.com
-*	 
-*	 @Description LIB 
-*	 Javascript librairy POO
-*/
+/*! lib - v 0.1 - 2014-01-20
+* https://github.com/jimmylatreille/lib
+* Copyright (c) 2014 AUTHORS.txt; Licensed MIT, GPL */
+ 
+ var lib  = {
+	version : 0.1,
+	spec : 'ECMAScript 5'
+}
 
-var log = console.log;
-
- const LIB  = {
-	version : 0.1
+//Clean String multy spacing 
+String.prototype.clean = function() {
+	return this.replace(/\s{2,}/g, ' ');
 }
