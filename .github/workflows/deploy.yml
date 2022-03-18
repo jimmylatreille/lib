@@ -36,12 +36,21 @@ jobs:
           echo test, and deploy your project.
   
       - name: deploy file
-        uses: wlixcc/SFTP-Deploy-Action@v1.0
+
+        #FTP
+      - uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          username: 'emcitv@ministryrevealed.com'
-          server: 'ftp.ministryrevealed.com'
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
-          local_path: './'
-          port: '21'
-          remote_path: '/public_html/lib/'
-          #args: '-o ConnectTimeout=5'
+          server: ftp.ministryrevealed.com
+          username: emcitv@ministryrevealed.com
+          password: ${{ secrets.ftp_password }}
+
+        #SFTP
+        # uses: wlixcc/SFTP-Deploy-Action@v1.0
+        # with:
+        #   username: 'emcitv@ministryrevealed.com'
+        #   server: 'ftp.ministryrevealed.com'
+        #   ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
+        #   local_path: './'
+        #   port: '21'
+        #   remote_path: '/public_html/lib/'
+        #   args: '-o ConnectTimeout=5'
