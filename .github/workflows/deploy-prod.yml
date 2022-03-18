@@ -25,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
   
-      - name: Deploy EMCI.COM EMCI.ORG
+      - name: DEPLOY EMCI.COM EMCI.ORG
 
         #FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -37,7 +37,6 @@ jobs:
           port: 21
           local-dir: ./
           server-dir: /public_html/prod/
-          log-level: minimal
           exclude: |
             **/.git*
             **/.git*/**
@@ -55,3 +54,6 @@ jobs:
         #   port: '21'
         #   remote_path: '/public_html/lib/'
         #   args: '-o ConnectTimeout=5'
+        #   
+        #   
+        #   
