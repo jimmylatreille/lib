@@ -53,7 +53,7 @@ jobs:
             **/.git*/**
             **/node_modules/**
             fileToExclude.txt
-            folder/.sync-state.json
+            .ftp-deploy-sync-state.json
           log-level: minimal
 
 
