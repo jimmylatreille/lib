@@ -46,8 +46,6 @@ jobs:
           port: 21
           local-dir: ./
           server-dir: /public_html/lib/
-          #Prints which modifications will be made with current config 
-          dry-run: true
           exclude: |
             **/.git*
             **/.git*/**
