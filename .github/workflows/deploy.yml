@@ -44,4 +44,4 @@ jobs:
           local_path: './'
           port: '21'
           remote_path: '/public_html/lib/'
-          args: '-o ConnectTimeout=5'
+          #args: '-o ConnectTimeout=5'
