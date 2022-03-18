@@ -25,35 +25,25 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
   
-      - name: Deploy on preview.emcitv.com
+      - name: Deploy on preview.emci.com
 
         #FTP
-        uses: airvzxf/ftp-deployment-action@latest
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
+          protocol: ftps
           server: ${{ secrets.HOST }}
-          user: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
           local-dir: ./
-          remote_dir: /public_html/dev/
-          delete: "false"
-          max_retries: 10
-
-        # uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        # with:
-        #   protocol: ftps
-        #   server: ${{ secrets.HOST }}
-        #   username: ${{ secrets.USERNAME }}
-        #   password: ${{ secrets.FTP_PASSWORD }}
-        #   port: 21
-        #   local-dir: ./
-        #   server-dir: /public_html/dev/
-        #   log-level: minimal
-        #   exclude: |
-        #     **/.git*
-        #     **/.git*/**
-        #     **/node_modules/**
-        #     README.md
-        #     LICENSE
+          server-dir: /public_html/dev/
+          log-level: minimal
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            README.md
+            LICENSE
 
         #SFTP
         # uses: wlixcc/SFTP-Deploy-Action@v1.0
