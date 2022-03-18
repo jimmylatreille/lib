@@ -38,7 +38,7 @@ jobs:
       - name: deploy file
 
         #FTP
-      - uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ftp.ministryrevealed.com
           username: emcitv@ministryrevealed.com
