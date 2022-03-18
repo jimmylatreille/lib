@@ -30,7 +30,7 @@ jobs:
         #FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          protocol: ftps
+          protocol: ftp
           server: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
