@@ -24,25 +24,25 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-  
+      
       - name: EMCI.COM EMCI.ORG
 
         #FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ftp.ministryrevealed.com
-          username: emcitv@ministryrevealed.com
+          server:   ${{ secrets.host }}
+          username: ${{ secrets.username }}
           password: ${{ secrets.ftp_password }}
           port: 21
           local-dir: ./
           server-dir: /public_html/lib/
           log-level: minimal
           exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            README.md
-            LICENSE
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          README.md
+          LICENSE
 
         #SFTP
         # uses: wlixcc/SFTP-Deploy-Action@v1.0
