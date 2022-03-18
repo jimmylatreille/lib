@@ -27,3 +27,6 @@ function divided(nb1, nb2){
 function plus(nb1, nb2){
 	return nb1 + nb2;
 }
+function modulo(nb1, nb2){
+	return nb1 % nb2;
+}
