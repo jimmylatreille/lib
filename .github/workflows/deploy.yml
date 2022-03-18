@@ -54,7 +54,7 @@ jobs:
             **/node_modules/**
             fileToExclude.txt
             folder/.sync-state.json
-          log-level: true
+          log-level: minimal
 
 
 
