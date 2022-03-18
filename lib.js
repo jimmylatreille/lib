@@ -19,3 +19,7 @@ function multiply(nb1, nb2) {
 function minus(nb1, nb2){
 	return nb1 - nb2;
 }
+
+function divided(nb1, nb2){
+	return nb1 / nb2;
+}
