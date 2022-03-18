@@ -52,8 +52,8 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
-            fileToExclude.txt
-            .ftp-deploy-sync-state.json
+            README.md
+            LICENSE
           log-level: minimal
 
 
