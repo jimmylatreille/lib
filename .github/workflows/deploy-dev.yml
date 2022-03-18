@@ -28,7 +28,7 @@ jobs:
       - name: Deploy on preview.emcitv.com
 
         #FTP
-        ses: airvzxf/ftp-deployment-action@latest
+        uses: airvzxf/ftp-deployment-action@latest
         with:
           server: ${{ secrets.HOST }}
           user: ${{ secrets.USERNAME }}
