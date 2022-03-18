@@ -6,7 +6,7 @@ name: DEPLOY
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ dev ]
+    branches: [ master ]
   #pull_request:
    # branches: [ master ]
 
@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.ftp_password }}
           port: 21
           local-dir: ./
-          server-dir: /public_html/lib/
+          server-dir: /public_html/prod/
           log-level: minimal
           exclude: |
             **/.git*
