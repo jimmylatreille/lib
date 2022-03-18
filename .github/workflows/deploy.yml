@@ -42,5 +42,6 @@ jobs:
           server: 'ftp.ministryrevealed.com'
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
           local_path: './'
+          password: 'Mju76yhnbgt5'
           remote_path: '/public_html/lib/'
           args: '-o ConnectTimeout=5'
