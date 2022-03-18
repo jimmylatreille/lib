@@ -11,3 +11,7 @@
 String.prototype.clean = function() {
 	return this.replace(/\s{2,}/g, ' ');
 }
+
+function multiply(nb1, nb2) {
+	return nb1 * nb2; 
+}
