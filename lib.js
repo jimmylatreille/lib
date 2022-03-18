@@ -7,7 +7,7 @@
 	spec : 'ECMAScript 5'
 }
 
-//Clean String multy spacing 
+//Clean String spacing
 String.prototype.clean = function() {
 	return this.replace(/\s{2,}/g, ' ');
 }
@@ -20,7 +20,7 @@ function minus(nb1, nb2){
 	return nb1 - nb2;
 }
 
-function divided(nb1, nb2){
+function divide(nb1, nb2){
 	return nb1 / nb2;
 }
 
