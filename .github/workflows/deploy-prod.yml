@@ -30,14 +30,13 @@ jobs:
         #FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          protocol: ftp
+          protocol: ftps
           server: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           local-dir: ./
           server-dir: /public_html/emci.com/
-          # args: --ignore-time
           exclude: |
             **/.git*
             **/.git*/**
