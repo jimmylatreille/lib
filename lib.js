@@ -3,7 +3,7 @@
 * Copyright (c) 2014 AUTHORS.txt; Licensed MIT, GPL */
  
  var lib  = {
-	version : 0.7,
+	version : 0.8,
 	spec : 'ECMAScript 7'
 }
 
