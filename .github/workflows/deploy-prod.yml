@@ -36,7 +36,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           local-dir: ./
-          server-dir: /public_html/prod/
+          server-dir: /public_html/emci.com/
           args: --ignore-time
           exclude: |
             **/.git*
