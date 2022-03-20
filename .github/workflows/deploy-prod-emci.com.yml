@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: DEPLOY PROD SERVER
+name: DEPLOY PROD SERVER EMCI ORG
 
 # Controls when the workflow will run
 on:
@@ -37,6 +37,22 @@ jobs:
           port: 21
           local-dir: ./
           server-dir: /public_html/emci.com/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            README.md
+            LICENSE#FTP
+
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          protocol: ftps
+          server: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          local-dir: ./
+          server-dir: /public_html/emci.org/
           exclude: |
             **/.git*
             **/.git*/**
