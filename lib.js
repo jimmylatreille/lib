@@ -4,7 +4,7 @@
  
  var lib  = {
 	version : 0.7,
-	spec : 'ECMAScript 6'
+	spec : 'ECMAScript 7'
 }
 
 //Clean String spacing
