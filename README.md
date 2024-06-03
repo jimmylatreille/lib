@@ -1,7 +1,7 @@
 lib.js
 ===
 
-Library that extend the core of javascript Object
+Library that extend the core of javascript
 
 ===
 
